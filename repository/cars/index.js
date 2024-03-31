@@ -1,12 +1,21 @@
-const { cars } = require("../../models");
+const crypto = require("crypto");
+const path = require("path");
+const { cars, options, specs } = require("../../models");
 const { getData, setData, deleteData } = require("../../helper/redis");
+const { uploader } = require("../../helper/cloudinary");
 
 exports.getCars = async () => {
-  const data = await cars.findAll(/* {
-    include: {
-      model: ["options"],
-    },
-  } */);
+  const opt = {
+    include: [
+      {
+        model: options,
+      },
+      {
+        model: specs,
+      },
+    ],
+  };
+  const data = await cars.findAll(opt);
   if (!data || data.length == 0) {
     throw { message: "Not Cars Found" };
   }
@@ -14,6 +23,19 @@ exports.getCars = async () => {
 };
 
 exports.getCar = async (id) => {
+  const opt = {
+    where: {
+      id,
+    },
+    include: [
+      {
+        model: options,
+      },
+      {
+        model: specs,
+      },
+    ],
+  };
   const key = `cars:${id}`;
 
   // check redis and if there are any data return data from redis
@@ -23,14 +45,7 @@ exports.getCar = async (id) => {
   }
 
   // if in the redis not found, we will get from database (postgres) and then save it to redis
-  data = await cars.findAll({
-    where: {
-      id,
-    },
-    // include: {
-    //   model: options,
-    // },
-  });
+  data = await cars.findAll(opt);
   if (data.length > 0) {
     // save in the redis if in the postgres is found
     await setData(key, data[0], 300);
@@ -43,6 +58,13 @@ exports.getCar = async (id) => {
 
 exports.createCar = async (payload) => {
   // Create data to postgres
+  if (payload.image) {
+    const { image } = payload;
+    image.publicId = crypto.randomBytes(16).toString("hex");
+    image.name = `${image.publicId}${path.parse(image.name).ext}`;
+    const imageUpload = await uploader(image);
+    payload.image = imageUpload.secure_url;
+  }
 
   const data = await cars.create(payload);
 
@@ -54,6 +76,19 @@ exports.createCar = async (payload) => {
 };
 
 exports.updateCar = async (id, payload) => {
+  const opt = {
+    where: {
+      id,
+    },
+    include: [
+      {
+        model: options,
+      },
+      {
+        model: specs,
+      },
+    ],
+  };
   const key = `cars:${id}`;
 
   // update data to postgres
@@ -64,14 +99,7 @@ exports.updateCar = async (id, payload) => {
   });
 
   // get data from postgres
-  const data = await cars.findAll({
-    where: {
-      id,
-    },
-    // include: {
-    //   model: student,
-    // },
-  });
+  const data = await cars.findAll(opt);
   if (data.length > 0) {
     // save to redis (cache)
     await setData(key, data[0], 300);

@@ -1,19 +1,26 @@
-const crypto = require("crypto");
-const path = require("path");
-const { cars, option } = require("../../models");
+const { cars, options } = require("../../models");
 const { uploader } = require("../../helper/cloudinary");
 const { getData, setData, deleteData } = require("../../helper/redis");
 
 exports.getOptions = async () => {
-  const data = await option.findAll(/* {
+  const opt = {
     include: {
       model: cars,
     },
-  } */);
+  };
+  const data = await options.findAll(opt);
   return data;
 };
 
 exports.getOption = async (id) => {
+  const opt = {
+    where: {
+      id,
+    },
+    include: {
+      model: cars,
+    },
+  };
   const key = `options:${id}`;
 
   // get from redis
@@ -23,14 +30,7 @@ exports.getOption = async (id) => {
   }
 
   // get from db
-  data = await option.findAll({
-    where: {
-      id,
-    },
-    // include: {
-    //   model: cars,
-    // },
-  });
+  data = await options.findAll(opt);
   if (data.length > 0) {
     // save to redis
     await setData(key, data[0], 300);
@@ -42,24 +42,10 @@ exports.getOption = async (id) => {
 };
 
 exports.createOption = async (payload) => {
-  if (payload.photo) {
-    // upload image to cloudinary
-    const { photo } = payload;
-
-    // make unique filename -> 213123128uasod9as8djas
-    photo.publicId = crypto.randomBytes(16).toString("hex");
-
-    // rename the file -> 213123128uasod9as8djas.jpg / 213123128uasod9as8djas.png
-    photo.name = `${photo.publicId}${path.parse(photo.name).ext}`;
-
-    // Process to upload image
-    const imageUpload = await uploader(photo);
-    payload.photo = imageUpload.secure_url;
-  }
-
   // save to db
-  const data = await option.create(payload);
-
+  console.log("masuk");
+  const data = await options.create(payload);
+  console.log("keluar");
   // save to redis
   const key = `options:${data.id}`;
   await setData(key, data, 300);
@@ -68,6 +54,14 @@ exports.createOption = async (payload) => {
 };
 
 exports.updateOption = async (id, payload) => {
+  const opt = {
+    where: {
+      id,
+    },
+    include: {
+      model: cars,
+    },
+  };
   const key = `options:${id}`;
 
   if (payload.photo) {
@@ -86,21 +80,14 @@ exports.updateOption = async (id, payload) => {
   }
 
   // update to postgres
-  await option.update(payload, {
+  await options.update(payload, {
     where: {
       id,
     },
   });
 
   // get from postgres
-  const data = await option.findAll({
-    where: {
-      id,
-    },
-    // include: {
-    //   model: cars,
-    // },
-  });
+  const data = await options.findAll(opt);
   if (data.length > 0) {
     // save to redis
     await setData(key, data[0], 300);
@@ -115,7 +102,7 @@ exports.deleteOption = async (id) => {
   const key = `options:${id}`;
 
   // delete from postgres
-  await option.destroy({ where: { id } });
+  await options.destroy({ where: { id } });
 
   // delete from redis
   await deleteData(key);

@@ -35,7 +35,9 @@ exports.getCar = async (req, res, next) => {
 
 exports.createCar = async (req, res, next) => {
   try {
-    const payload = req.body;
+    let payload = req.body;
+    const { image } = req.files;
+    payload = { ...payload, image };
     const data = await carUsecase.createCar(payload);
 
     res.status(201).json({

@@ -138,13 +138,69 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "plate",
+									"value": "B-0001",
+									"type": "text"
+								},
+								{
+									"key": "manufacture",
+									"value": "Bebas",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "F150",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/COMPUTER/Desktop/Coding/SI Binar/Chapter 3/Challenge 3/public/Assets/images_cars/car01.min.jpg"
+								},
+								{
+									"key": "rentPerDay",
+									"value": "200000",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.",
+									"type": "text"
+								},
+								{
+									"key": "availableAt",
+									"value": "2024-03-13T15:49:05.563Z",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Automatic",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "gatau",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:4000/api/cars",
@@ -168,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
+							"raw": "{\r\n    \"name\": \"dua\",\r\n    \"car_id\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -197,7 +253,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
+							"raw": "{\r\n    \"name\": \"dua\",\r\n    \"car_id\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +282,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"raw": "{\r\n            \"id\": 2,\r\n            \"plate\": \"B-0001\",\r\n            \"manufacture\": \"Bebas\",\r\n            \"model\": \"F150\",\r\n            \"image\": \"./images/car01.min.jpg\",\r\n            \"rentPerDay\": 200000,\r\n            \"capacity\": 2,\r\n            \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n            \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n            \"transmission\": \"Automatic\",\r\n            \"available\": true,\r\n            \"type\": \"gatau\",\r\n            \"year\": 2022\r\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -234,7 +290,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:4000/api/cars/1",
+							"raw": "http://localhost:4000/api/cars/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -243,7 +299,7 @@
 							"path": [
 								"api",
 								"cars",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -256,7 +312,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"name\": \"dua\",\r\n    \"car_id\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -286,7 +342,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"raw": "\r\n    {\r\n    \"name\": \"dua\",\r\n    \"car_id\": 2\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
