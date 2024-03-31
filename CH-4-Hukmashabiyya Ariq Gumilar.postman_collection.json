@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "b914b154-6f67-473d-b6d5-af10677d5d3b",
+		"name": "CH-4-Hukmashabiyya Ariq Gumilar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33567782"
+	},
+	"item": [
+		{
+			"name": "CH-4-Hukmashabiyya Ariq Gumilar",
+			"item": [
+				{
+					"name": "Get Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/options",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/specs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"specs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/cars/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Options id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/options/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"options",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specs id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/specs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"specs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Options",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/options",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Specs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"B-0001\",\r\n    \"manufacture\": \"Bebas\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"gatau\",\r\n    \"year\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/specs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"specs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Cars",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/cars/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Options",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/options/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"options",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Specs",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plate\": \"DBH-3491\",\r\n    \"manufacture\": \"Bebas2\",\r\n    \"model\": \"F150\",\r\n    \"image\": \"./images/car01.min.jpg\",\r\n    \"rentPerDay\": 200000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Brake assist. Leather-wrapped shift knob. Glove box lamp. Air conditioning w/in-cabin microfilter.\",\r\n    \"availableAt\": \"2024-03-13T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"Sabeb\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n        \"Cruise Control\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"Tinted Glass\",\r\n        \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n        \"Brake assist\",\r\n        \"Leather-wrapped shift knob\",\r\n        \"Glove box lamp\",\r\n        \"Air conditioning w/in-cabin microfilter\",\r\n        \"Body color folding remote-controlled pwr mirrors\",\r\n        \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/specs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"specs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cars",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/cars/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Options",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/options/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"options",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/specs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"specs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
