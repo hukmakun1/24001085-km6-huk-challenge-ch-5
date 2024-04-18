@@ -1,0 +1,6 @@
+runtime: nodejs20
+service: 24001085-km6-huk-challenge-ch-5
+
+predeploy:
+  - npm install
+  - npx sequelize db:migrate

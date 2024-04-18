@@ -43,9 +43,8 @@ exports.getOption = async (id) => {
 
 exports.createOption = async (payload) => {
   // save to db
-  console.log("masuk");
   const data = await options.create(payload);
-  console.log("keluar");
+
   // save to redis
   const key = `options:${data.id}`;
   await setData(key, data, 300);

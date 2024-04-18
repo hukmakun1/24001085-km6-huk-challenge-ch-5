@@ -5,7 +5,7 @@ exports.getSpecs = async (req, res, next) => {
     const data = await specUsecase.getSpecs();
 
     res.status(200).json({
-      message: "Successs",
+      message: "Success",
       data,
     });
   } catch (error) {
@@ -25,7 +25,7 @@ exports.getSpec = async (req, res, next) => {
     }
 
     res.status(200).json({
-      message: "Successs",
+      message: "Success",
       data,
     });
   } catch (error) {
@@ -39,7 +39,7 @@ exports.createSpec = async (req, res, next) => {
     const data = await specUsecase.createSpec(payload);
 
     res.status(201).json({
-      message: "Successs",
+      message: "Success",
       data,
     });
   } catch (error) {
@@ -61,7 +61,7 @@ exports.updateSpec = async (req, res, next) => {
     const data = await specUsecase.updateSpec(id, { name });
 
     res.status(200).json({
-      message: "Successs",
+      message: "Success",
       data,
     });
   } catch (error) {
@@ -75,7 +75,7 @@ exports.deleteSpec = async (req, res, next) => {
     const data = await specUsecase.deleteSpec(id);
 
     res.status(200).json({
-      message: "Successs",
+      message: "Success",
       data,
     });
   } catch (error) {
