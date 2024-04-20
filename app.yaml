@@ -1,6 +1,4 @@
 runtime: nodejs20
-service: 24001085-km6-huk-challenge-ch-5
 
-predeploy:
-  - npm install
-  - npx sequelize db:migrate
+vpc_access_connector:
+  name: "projects/si-chapter-5/locations/asia-southeast2/connectors/connect-to-sql"

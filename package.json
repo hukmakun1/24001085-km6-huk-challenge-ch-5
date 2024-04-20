@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon index.js",
-    "start": "node index.js"
-  },
+        "dev": "npx nodemon index.js",
+        "start": "npx sequelize db:migrate && node index.js"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

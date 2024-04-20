@@ -3,12 +3,17 @@ const router = express.Router();
 
 const specController = require("../controller/specs");
 
-router.route("/").get(specController.getSpecs).post(specController.createSpec);
+const { authMiddleware } = require("../middleware/auth");
+
+router
+  .route("/")
+  .get(authMiddleware(["user", "admin"]), specController.getSpecs)
+  .post(authMiddleware(["admin"]), specController.createSpec);
 
 router
   .route("/:id")
-  .get(specController.getSpec)
-  .put(specController.updateSpec)
-  .delete(specController.deleteSpec);
+  .get(authMiddleware(["user", "admin"]), specController.getSpec)
+  .put(authMiddleware(["admin"]), specController.updateSpec)
+  .delete(authMiddleware(["admin"]), specController.deleteSpec);
 
 module.exports = router;
