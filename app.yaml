@@ -1,4 +1,4 @@
 runtime: nodejs20
 
 vpc_access_connector:
-  name: "projects/si-chapter-5/locations/asia-southeast2/connectors/connect-to-sql"
+  name: "projects/si-chapter-5/locations/asia-southeast2/connectors/connect-sql"
